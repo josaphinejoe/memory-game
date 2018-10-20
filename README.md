@@ -1,7 +1,8 @@
 # memory-game
 its a matching card game
-* The player flips one card over to reveal its underlying symbol.
-* The player then turns over a second card, trying to find the corresponding card with the same symbol.
-* If the cards match, both cards stay flipped over.
-* If the cards do not match, both cards are flipped face down.
-* The game ends once all cards have been correctly matched.
+* At first you have to turn over any card randomly to know the symbol underlying it.
+* Now in order to find out the corresponding card with the same symbol,turn over any other card.
+* Both the cards will stay flipped over, if it holds the same symbol.
+* Otherwise both of them are made to turn over to face down.
+* You will win the game, once you have correctly matched all the cards with less time.
+***Enjoy the game***
