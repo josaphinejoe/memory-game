@@ -5,4 +5,5 @@ its a matching card game
 * Both the cards will stay flipped over, if it holds the same symbol.
 * Otherwise both of them are made to turn over to face down.
 * You will win the game, once you have correctly matched all the cards with less time.
+
 ***Enjoy the game***
