@@ -1,4 +1,4 @@
-var move = 0;
+var moves = 0;
 var mFound = 0;
 
 
@@ -55,7 +55,7 @@ function toggle() {
         disableCLick();
     } else if (openCards.length === 1) {
 
-        updateMove();
+        updateMoves();
         $(this).toggleClass("show open").animateCss('flipInY');
         openCards.push($(this));
         setTimeout(matchOpenCards, 1100);
@@ -102,12 +102,12 @@ $.fn.extend({
     }
 });
 
-function updateMove() {
-    move += 1;
-    $('#move').html(`${move} Move`);
-    if (move == 24) {
+function updateMoves() {
+    moves += 1;
+    $('#moves').html(`${moves} Moves`);
+    if (moves == 24) {
         addBlankStar();
-    } else if (move == 15) {
+    } else if (moves == 15) {
         addBlankStar();
     }
 }
@@ -131,7 +131,7 @@ function addStars() {
 }
 
 function resetGame() {
-    move = 0;
+    moves = 0;
     mFound = 0;
     $('#deck').empty();
     $('#stars').empty();
@@ -146,7 +146,7 @@ function resetGame() {
 function playGame() {
     generate();
     $('.card').click(toggle);
-    $('#move').html("0 Move");
+    $('#moves').html("0 Moves");
     addStars(3);
 }
 
@@ -159,8 +159,8 @@ function showResults() {
             <polyline class="path check" fill="none" stroke="#73AF55" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 29.8,67.5 " /> </svg>
         <p class="success"> Congrats !!! </p>
         <p>
-            <span class="score-titles">Move:</span>
-            <span class="score-values">${move}</span>
+            <span class="score-titles">Moves:</span>
+            <span class="score-values">${moves}</span>
             <span class="score-titles">Time:</span>
             <span class="score-values">${timer.getTimeValues().toString()}</span>
         </p>
@@ -169,10 +169,10 @@ function showResults() {
                 <i class="fa fa-star fa-3x"></i>
              </div>
              <div class="star">
-                <i class="fa ${ (move > 23) ? "fa-star-o" : "fa-star"}  fa-3x"></i>
+                <i class="fa ${ (moves > 23) ? "fa-star-o" : "fa-star"}  fa-3x"></i>
              </div>
             <div class="star">
-                <i class="fa ${ (move > 14) ? "fa-star-o" : "fa-star"} fa-3x"></i>
+                <i class="fa ${ (moves > 14) ? "fa-star-o" : "fa-star"} fa-3x"></i>
              </div>
         </div>
         <div class="text-center margin-top-2" id="restart">
