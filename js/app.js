@@ -7,7 +7,7 @@ var cards = ["fa-diamond", "fa-paper-plane-o", "fa-anchor", "fa-bolt", "fa-cube"
 
 
 var timer = new Timer();
-timer.addEventListener('secondsUpdated', function(e) {
+timer.addEventListener('secondsUpdated', function (e) {
     $('#timer').html(timer.getTimeValues().toString());
 });
 
@@ -63,7 +63,7 @@ function toggle() {
 }
 
 function disableCLick() {
-    openCards.forEach(function(card) {
+    openCards.forEach(function (card) {
         card.off('click');
     });
 }
@@ -93,9 +93,9 @@ function removeOpenCards() {
 }
 
 $.fn.extend({
-    animateCss: function(animationName) {
-        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-        this.addClass(animationName).one(animationEnd, function() {
+    animateCss: function (animationName) {
+        var animationEnd = 'animation';
+        this.addClass(animationName).one(animationEnd, function () {
             $(this).removeClass(animationName);
         });
         return this;
@@ -169,10 +169,10 @@ function showResults() {
                 <i class="fa fa-star fa-3x"></i>
              </div>
              <div class="star">
-                <i class="fa ${ (moves > 23) ? "fa-star-o" : "fa-star"}  fa-3x"></i>
+                <i class="fa ${(moves > 23) ? "fa-star-o" : "fa-star"}  fa-3x"></i>
              </div>
             <div class="star">
-                <i class="fa ${ (moves > 14) ? "fa-star-o" : "fa-star"} fa-3x"></i>
+                <i class="fa ${(moves > 14) ? "fa-star-o" : "fa-star"} fa-3x"></i>
              </div>
         </div>
         <div class="text-center margin-top-2" id="restart">

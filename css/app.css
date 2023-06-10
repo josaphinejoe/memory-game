@@ -42,7 +42,7 @@ h1 {
 .deck {
     width: 660px;
     min-height: 680px;
-    background: linear-gradient(160deg, #020cba 0%, #aa7e0d 100%);
+    background: linear-gradient(160deg, #06c6ed 0%, #aa7e0d 100%);
     padding: 32px;
     border-radius: 10px;
     box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
@@ -79,14 +79,10 @@ h1 {
 
 .deck .card.match {
     cursor: default;
-    background: #021cb1;
+    background: #d24811;
     font-size: 33px;
 }
 
-
-/*
-
- */
 
 .score-panel {
     text-align: left;
@@ -124,19 +120,16 @@ svg {
 }
 
 .path.circle {
-    -webkit-animation: dash 0.9s ease-in-out;
     animation: dash 0.9s ease-in-out;
 }
 
 .path.line {
     stroke-dashoffset: 1000;
-    -webkit-animation: dash 0.9s 0.35s ease-in-out forwards;
     animation: dash 0.9s 0.35s ease-in-out forwards;
 }
 
 .path.check {
     stroke-dashoffset: -100;
-    -webkit-animation: dash-check 0.9s 0.35s ease-in-out forwards;
     animation: dash-check 0.9s 0.35s ease-in-out forwards;
 }
 
@@ -148,42 +141,6 @@ p {
 
 p.success {
     color: #7AAF55;
-}
-
-@-webkit-keyframes dash {
-    0% {
-        stroke-dashoffset: 1000;
-    }
-    100% {
-        stroke-dashoffset: 0;
-    }
-}
-
-@keyframes dash {
-    0% {
-        stroke-dashoffset: 1000;
-    }
-    100% {
-        stroke-dashoffset: 0;
-    }
-}
-
-@-webkit-keyframes dash-check {
-    0% {
-        stroke-dashoffset: -100;
-    }
-    100% {
-        stroke-dashoffset: 900;
-    }
-}
-
-@keyframes dash-check {
-    0% {
-        stroke-dashoffset: -100;
-    }
-    100% {
-        stroke-dashoffset: 900;
-    }
 }
 
 #sucess-result {
@@ -205,12 +162,12 @@ p.success {
 }
 
 .star {
-     display: inline;
+    display: inline;
     margin: 2px;
 }
 
 .margin-top-2 {
-  margin-top: 2vh;
+    margin-top: 2vh;
 }
 
 .text-right {
